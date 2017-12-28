@@ -5,7 +5,6 @@ target 'ZZStoryboardReference_Example' do
 
   target 'ZZStoryboardReference_Tests' do
     inherit! :search_paths
-
     
   end
 end

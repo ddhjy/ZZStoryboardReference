@@ -1,0 +1,6 @@
+framework module ZZStoryboardReference {
+  umbrella header "ZZStoryboardReference-umbrella.h"
+
+  export *
+  module * { export * }
+}
