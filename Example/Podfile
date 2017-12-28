@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ZZStoryboardReference_Example' do
+  pod 'ZZStoryboardReference', :path => '../'
+
+  target 'ZZStoryboardReference_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
