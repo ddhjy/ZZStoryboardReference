@@ -10,7 +10,7 @@
 #import "UIViewController+ZZStoryboardReference.h"
 
 /**
- Apple introduces storyboard reference from iOS 9, which provides a placeholder for scene in external storyboard. But due to the version limitation, it's not that usefull. What's more, it's not friendly for unit test, which rises the risk of refactoring. This class is a alternative of that.
+ Apple introduces storyboard reference from iOS 9, which provides a placeholder for scene in external storyboard. But due to the version limitation, it's not that practical. What's more, it's not friendly to unit test, which rises the risk of refactoring. This class is a alternative of that.
  */
 @interface ZZStoryboardReference : UIViewController
 

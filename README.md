@@ -5,6 +5,18 @@
 [![License](https://img.shields.io/cocoapods/l/ZZStoryboardReference.svg?style=flat)](http://cocoapods.org/pods/ZZStoryboardReference)
 [![Platform](https://img.shields.io/cocoapods/p/ZZStoryboardReference.svg?style=flat)](http://cocoapods.org/pods/ZZStoryboardReference)
 
+Apple introduces storyboard reference from iOS 9, which provides a placeholder for scene in external storyboard. But due to the version limitation, it's not that practical. What's more, it's not friendly to unit test, which rises the risk of refactoring. ZZStoryboardReference is a alternative of that.
+
+You just need  dragging a view controller(called A) scene to the storyboarad, set its class to ZZStoryboardReference, replace the content  view with a label, then  set the label's text to another view controller's (called B) name which can instantiate from storyboard. (I recommend copying the sence in the demo  and modify the label's text) Now A is a place holder of B, We can link segue to A when it's not  convenient for B. In addition, B should override the storyboardName method as the demo shows.
+
+When you want instantiate view controller from stroyboard with hard code:
+```objective-c
+ZZRedViewController *redVC = [ZZRedViewController newFromStoryboard];
+[self.navigationController pushViewController:redVC animated:YES];
+```
+
+What's more, this mechanism makes unit test for storyboard scene easy. I write a unit test in the demo, when we move a scene for a storyboard to another and forget modifing the storyboardName method, the unit test would rise a exception.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
