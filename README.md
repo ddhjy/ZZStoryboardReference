@@ -21,6 +21,8 @@ What's more, this mechanism makes unit test for storyboard scene easy. I write a
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+[![Watch the video](https://github.com/ddhjy/ZZStoryboardReference/blob/master/Snapshots/operation_guide_placeholder.png)](https://youtu.be/y3Cu7-iZXJo)
+
 ## Requirements
 
 ## Installation
