@@ -12,17 +12,14 @@
 #import "ZZBlueViewController.h"
 
 typedef NS_ENUM(NSUInteger, ZZHomeTableViewSection) {
-    ZZHomeTableViewSectionSeguePush = 0,
-    ZZHomeTableViewSectionHardCodePush
+    ZZHomeTableViewSectionPushWithSegue = 0,
+    ZZHomeTableViewSectionPushWithCode
 };
-
-@interface ZZHomeTableViewController ()
-@end
 
 @implementation ZZHomeTableViewController
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == ZZHomeTableViewSectionHardCodePush) {
+    if (indexPath.section == ZZHomeTableViewSectionPushWithCode) {
         switch (indexPath.row) {
             case 0:
                 [self.navigationController pushViewController:[ZZRedViewController newFromStoryboard] animated:YES];

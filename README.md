@@ -9,7 +9,7 @@ Apple introduces storyboard reference from iOS 9, which provides a placeholder f
 
 You just need  dragging a view controller(called A) scene to the storyboarad, set its class to ZZStoryboardReference, replace the content  view with a label, then  set the label's text to another view controller's (called B) name which can instantiate from storyboard. (I recommend copying the sence in the demo  and modify the label's text) Now A is a place holder of B, We can link segue to A when it's not  convenient for B. In addition, B should override the storyboardName method as the demo shows.
 
-If you want to instantiate view controller from stroyboard with hard code:
+If you want to instantiate view controller from stroyboard with code:
 ```objective-c
 ZZRedViewController *redVC = [ZZRedViewController newFromStoryboard];
 [self.navigationController pushViewController:redVC animated:YES];
